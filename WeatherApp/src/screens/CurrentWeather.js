@@ -3,20 +3,21 @@ import {Feather} from '@expo/vector-icons'
 import {View,Text,SafeAreaView, StyleSheet} from 'react-native'
 
 const CurrentWeather = ()=>{
+  const{wrapper,container,temp,feels,highlow,highlow_wrapper,message,description,bodyWrapper}= styles
 return(
-  <SafeAreaView style={styles.wrapper}>
-     <View style={styles.container}>
+  <SafeAreaView style={wrapper}>
+     <View style={container}>
       <Feather name='sun' size={100} color="black"/>
-      <Text style={styles.temp}>6</Text>
-      <Text style={styles.feels}>Feels like 5</Text>
-      <View style={styles.highlow_wrapper}>
-        <Text style={styles.highlow}>high: 8</Text> 
-        <Text style={styles.highlow}>Low: 6</Text> 
+      <Text style={temp}>6</Text>
+      <Text style={feels}>Feels like 5</Text>
+      <View style={highlow_wrapper}>
+        <Text style={highlow}>high: 8</Text> 
+        <Text style={highlow}>Low: 6</Text> 
       </View>
     </View>
-      <View style={styles.bodyWrapper}>
-        <Text style={styles.description}>It's Sunny</Text>
-        <Text style={styles.message}>It's Perfect T-shirt weather</Text>
+      <View style={bodyWrapper}>
+        <Text style={description}>It's Sunny</Text>
+        <Text style={message}>It's Perfect T-shirt weather</Text>
       </View>  
  </SafeAreaView>
 )
