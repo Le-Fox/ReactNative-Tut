@@ -1,6 +1,7 @@
 import React from 'react';
 import {Feather} from '@expo/vector-icons'
 import {View,Text,SafeAreaView, StyleSheet} from 'react-native'
+import RowText from '../components/RowText';
 
 const CurrentWeather = ()=>{
   const{wrapper,container,temp,feels,highlow,highlow_wrapper,message,description,bodyWrapper}= styles
@@ -10,6 +11,8 @@ return(
       <Feather name='sun' size={100} color="black"/>
       <Text style={temp}>6</Text>
       <Text style={feels}>Feels like 5</Text>
+      
+     <RowText messageOne={'High: 8'} messageTwo={'Low: 6'} containerStyles={highlow_wrapper} messageOneStyles={highlow} messageTwoStyles={highlow}/>
       <View style={highlow_wrapper}>
         <Text style={highlow}>high: 8</Text> 
         <Text style={highlow}>Low: 6</Text> 
