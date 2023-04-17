@@ -12,16 +12,18 @@ return(
       <Text style={temp}>6</Text>
       <Text style={feels}>Feels like 5</Text>
       
-     <RowText messageOne={'High: 8'} messageTwo={'Low: 6'} containerStyles={highlow_wrapper} messageOneStyles={highlow} messageTwoStyles={highlow}/>
-      <View style={highlow_wrapper}>
-        <Text style={highlow}>high: 8</Text> 
-        <Text style={highlow}>Low: 6</Text> 
-      </View>
+      <RowText messageOne={'High: 8'} 
+      messageTwo={'Low: 6'} 
+      containerStyles={highlow_wrapper} 
+      messageOneStyles={highlow} 
+      messageTwoStyles={highlow}/>
     </View>
-      <View style={bodyWrapper}>
-        <Text style={description}>It's Sunny</Text>
-        <Text style={message}>It's Perfect T-shirt weather</Text>
-      </View>  
+    
+    <RowText messageOne={"It's Sunny"} 
+     messageTwo={"It's Perfect T-shirt weather"} 
+     containerStyles={bodyWrapper} 
+     messageOneStyles={description} 
+     messageTwoStyles={message}/> 
  </SafeAreaView>
 )
 }

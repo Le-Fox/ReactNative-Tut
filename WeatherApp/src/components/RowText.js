@@ -1,8 +1,8 @@
 import React from "react";
 import {View,Text,StyleSheet} from "react-native"
 
-const RowText =() => {
-const {messageOne,messageTwo,containerStyles,messageOneStyles,messageTwoStyles}= styles
+const RowText =(props) => {
+const {messageOne,messageTwo,containerStyles,messageOneStyles,messageTwoStyles}= props
     return(
         <View style={containerStyles}>
             <Text style={messageOneStyles}>{messageOne}</Text> 
