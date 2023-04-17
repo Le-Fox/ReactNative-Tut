@@ -4,9 +4,7 @@ import { NavigationContainer  } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Tabs from './src/components/Tabs.js'
 import { useGetWeather } from './src/hooks/useGetWeather.js';
-
-
-//api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
+import ErrorItem from './src/components/ErrorItem.js';
 
 const Tab = createBottomTabNavigator()
 const App =()=>{
@@ -14,7 +12,7 @@ const App =()=>{
   const [loading, error, weather] =useGetWeather()
 
 
-  if(weather&&weather.list){
+  if(weather&&weather.list && !loading){
     return(
       <NavigationContainer>
         <Tabs weather={weather}/>
@@ -24,7 +22,7 @@ const App =()=>{
 
     return (
       <View style={styles.container}>
-        <ActivityIndicator size={'large'} color={'blue'}/>
+       {error ?<ErrorItem/> :<ActivityIndicator size={'large'} color={'blue'}/>}
       </View>
     )
 
