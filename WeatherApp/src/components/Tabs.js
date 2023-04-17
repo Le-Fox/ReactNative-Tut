@@ -13,7 +13,18 @@ const Tabs =() =>{
         <Tab.Navigator 
         screenOptions={{
           tabBarActiveTintColor:'tomato',
-          tabBarInactiveTintColor:'grey'
+          tabBarInactiveTintColor:'grey',
+          tabBarStyle:{
+            backgroundColor:'lightblue'
+          },
+          headerStyle:{
+            backgroundColor:'lightblue'
+          },headerTitleAlign:'center',
+          headerTitleStyle:{
+            fontWeight:'bold',
+            fontSize:25,
+            color:'tomato'
+          }
       }}>
             <Tab.Screen name={'Current'} component={CurrentWeather} 
             options={{
